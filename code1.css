@@ -1,0 +1,230 @@
+.wrapper{
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+.left{
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  border: solid 7px black;
+  display: inline;
+  padding: 70px 25px;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  animation-delay: 0.5s;
+  /* background: red; */
+  z-index: 1;
+}
+
+.wleft{
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  border: solid 7px white;
+  color: white;
+  display: inline;
+  padding: 70px 25px;
+  /* animation-name: disappear; */
+  animation-duration: 0s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  background: white;
+  z-index: 2;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    /* z-index: 1; */
+  }
+  100% {
+    opacity: 0;
+    /* z-index: 0; */
+  }
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-180px);
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 40%,100% {
+    opacity: 1;
+  } */
+}
+
+.arrow-right {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  transform: rotate(45deg);
+
+  animation-name: slideIn-deg;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  animation-delay: 1.5s;
+  z-index: 1;
+}
+
+.warrow-right {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+
+  animation-duration: 0s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  background: white;
+  z-index: 2;
+}
+
+@keyframes slideIn-deg {
+  0% {
+    transform: translateX(-180px);
+    /* transform: rotate(45deg); */
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: translateX(0);
+    transform: rotate(45deg);
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 40%,100% {
+    opacity: 1;
+  } */
+}
+
+.right{
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  border: solid 7px black;
+  width: 250px;
+  padding: 20px;
+  animation-delay: 3.0s;
+}
+
+.sl{
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  z-index: 1;
+}
+
+.wh{
+  color: white;
+  background: white;
+  z-index: 2;
+}
+
+.borWhi{
+  border: solid 9px white;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.text{
+  position: absolute;
+  top: 420px;
+  left: 50px;
+  width: 60%;
+  animation-delay: 4.0s;
+}
+
+.next{
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+}
+
+.button26 {
+  text-align: center;
+}
+
+.button26 a {
+  display: inline-block;
+  position: relative;
+  padding: 1em 110px 1em 0em;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.button26 a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border: 3px solid #aaaaaa;
+  border-radius: 50vh;
+  transition: 0.3s;
+}
+
+.button26 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #333333;
+  border-right: 2px solid #333333;
+  transition: 0.3s;
+}
+
+.button26 a:hover {
+  text-decoration: underline;
+}
+
+.button26 a:hover::before {
+  background-color: #333;
+}
+
+.button26 a:hover::after {
+  border-top: 2px solid #f2f2f2;
+  border-right: 2px solid #f2f2f2;
+}

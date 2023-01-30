@@ -1,0 +1,64 @@
+
+h1 {
+  text-align: center;
+  position: absolute;
+  left: 27%;
+  width: 30%;
+  height: 20%;
+  border: 8px solid #000000;
+  display: inline-block;
+  /* margin: auto; */
+  padding: 50px 100px;
+  line-height: 120px;
+}
+
+#container {
+  text-align: center;
+}
+
+.answer{
+  position: absolute;
+  top: 70%;
+  left: 43%;
+}
+
+.answer .btn {
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  perspective: 300px;
+  width: 200px;
+  height: 80px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.answer .btn.cubic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 80px;
+  border: 7px solid black;
+  box-sizing: border-box;
+  line-height: 48px;
+  text-align: center;
+  transition: all 0.3s;
+  transform-origin: center center -35px;
+  //ボタンの大きさ変えて変な線が出たらここをいじる
+}
+.answer .btn.cubic .hovering {
+  background-color: black;
+  color: white;
+  transform: rotateX(90deg);
+}
+.answer .btn.cubic .default {
+  background-color: white;
+  color: black;
+  transform: rotateX(0);
+}
+.answer .btn.cubic:hover .hovering {
+  transform: rotateX(0);
+}
+.answer .btn.cubic:hover .default {
+  transform: rotateX(-90deg);
+}/*# sourceMappingURL=answer.css.map */

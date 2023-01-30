@@ -1,0 +1,107 @@
+.wrapper{
+  position: relative;
+}
+
+.top{
+  position: absolute;
+  top: 100px;
+  right: 20%;
+  /* width: 800px; */
+  animation-delay: 6.5s
+}
+
+.source{
+  position: absolute;
+  top: 170px;
+  left: 40%;
+  font-size: 60px;
+}
+
+.stick{
+  position: absolute;
+  top: 170px;
+  left: 35%;
+  border: solid 7px black;
+  /* radius: 4px; */
+  width: 1px;
+  height: 150px;
+  background: black;
+  /* transform: rotate(90deg); */
+  border-radius: 8px;
+  animation-delay: 2.5s;
+}
+
+.bottom{
+  position: absolute;
+  top: 360px;
+  left: 24%;
+  width: 800px;
+  animation-delay: 1.5s;
+}
+
+.sl{
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  /* animation-delay: 0.5s; */
+  z-index: 1;
+}
+
+.slst{
+  animation-name: slideInStick;
+  animation-duration: 6s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  /* animation-delay: 0.5s; */
+  z-index: 1;
+}
+
+.wh{
+  /* border: solid 7px white; */
+  color: white;
+  /* animation-duration: 0s;
+  animation-direction: normal;
+  animation-fill-mode:forwards; */
+  z-index: 2;
+}
+
+.whst{
+  border: solid 7px white;
+  background: white;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-180px);
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 40%,100% {
+    opacity: 1;
+  } */
+}
+
+@keyframes slideInStick {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+    z-index: 3;
+  }
+  30%{
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(175px);
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 40%,100% {
+    opacity: 1;
+  } */
+}

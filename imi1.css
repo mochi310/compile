@@ -1,0 +1,180 @@
+.top{
+  position: relative;
+  top: -20px;
+  /* border: solid 2px black; */
+  width: 500px;
+  height: 100px;
+}
+
+.top1{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  animation-delay: 1.0s;
+}
+
+
+.center{
+  position: absolute;
+  top: 150px;
+  left: 100px;
+    /* border: solid 1px red; */
+  width: 800px;
+  height: 300px;
+  font-size: 23px;
+}
+
+.str{
+  position: absolute;
+  top: 1px;
+  animation-delay: 2.0s;
+}
+
+.int{
+  position: absolute;
+  top: 50px;
+  animation-delay: 2.0s;
+}
+
+.apple{
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  animation-delay: 3.0s;
+}
+
+.colon{
+  position: absolute;
+  top: 50px;
+  left: 470px;
+  animation-delay: 2.0s;
+}
+
+.bottom{
+  position: absolute;
+  top:320px;
+  left: 330px;
+  width: 500px;
+}
+
+.bot1{
+  position: absolute;
+  animation-delay: 4.0s;
+}
+
+.bot2{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  animation-delay: 5.0s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-180px);
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 40%,100% {
+    opacity: 1;
+  } */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    z-index: 3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.next{
+  position: absolute;
+  top: 450px;
+  right: 60px;
+  width: 400px;
+}
+
+.button26 {
+  text-align: center;
+}
+
+.button26 a {
+  display: inline-block;
+  position: relative;
+  padding: 1em 110px 1em 0em;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.button26 a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border: 3px solid #aaaaaa;
+  border-radius: 50vh;
+  transition: 0.3s;
+}
+
+.button26 a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #333333;
+  border-right: 2px solid #333333;
+  transition: 0.3s;
+}
+
+.button26 a:hover {
+  text-decoration: underline;
+}
+
+.button26 a:hover::before {
+  background-color: #333;
+}
+
+.button26 a:hover::after {
+  border-top: 2px solid #f2f2f2;
+  border-right: 2px solid #f2f2f2;
+}
+
+.sl{
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  z-index: 1;
+}
+
+.zm{
+  animation-name: zoomIn;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-fill-mode:forwards;
+  z-index: 1;
+}
+
+.wh{
+  color: white;
+  z-index: 2;
+}
